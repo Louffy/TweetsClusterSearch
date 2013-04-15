@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
@@ -33,8 +34,8 @@ import org.apache.lucene.util.Version;
 public class Mylucene{
 	//private static final File indexPath = new File("D:\\index");
 	//private static final String dataPath = "D:\\english_tweets\\content_english\\20110208\\000.content";
-	private static final String dataPath = "E:\\workspace_web\\WeiboSearch\\WebContent\\data\\data.content";
-	private static final File indexPath = new File("E:\\workspace_web\\WeiboSearch\\WebContent\\index");
+	private static final String dataPath = "E:\\workspace_web\\tweetData\\data\\data.content.008";
+	private static final File indexPath = new File("E:\\workspace_web\\tweetData\\index");
 	private static final Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_36);
 	public void Mylucene(){
 	}
@@ -183,10 +184,17 @@ public class Mylucene{
 
 	public static void main(String[] args){
 		Mylucene mylucene = new Mylucene();
-		//if(mylucene.NoIndex()){
-		//	mylucene.CreateIndex();
-		//}
-		mylucene.Search("hello");
+		Date d = new Date();
+		System.out.println(d.toString());
+		if(mylucene.NoIndex()){
+			mylucene.CreateIndex();
+		}
+		Date t = new Date();
+		System.out.println(t.toString());
+		
+		mylucene.Search("apple");
+		Date s = new Date();
+		System.out.println(s.toString());
 	}	
 }
 

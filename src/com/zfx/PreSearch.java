@@ -1,10 +1,11 @@
 package com.zfx;
 
 import java.io.*;
+import java.util.Date;
 
 public class PreSearch {
-	private static final String predataPath = "E:\\workspace_web\\WeiboSearch\\WebContent\\predata";
-	private static final String dataPath = "E:\\workspace_web\\WeiboSearch\\WebContent\\data\\data.content";
+	private static final String predataPath = "E:\\workspace_web\\tweetData\\predata";
+	private static final String dataPath = "E:\\workspace_web\\tweetData\\data\\data.content";
 	public PreSearch(){
 		
 	}
@@ -104,6 +105,14 @@ public class PreSearch {
 	public static void main(String[] args){
 		PreSearch preSearch = new PreSearch();
 		preSearch.SearchData();
+		/*Date d = new Date();
+		System.out.println(d.toString());
+		for(long i = 0;i < 1000000000; i++){
+			;
+		}
+		Date t = new Date();
+		System.out.println(d.toString());
+		System.out.println(t.toString());*/
 		
 	}
 	
