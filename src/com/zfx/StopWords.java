@@ -51,7 +51,7 @@ public class StopWords {
 			"would","wouldn","wow","x","xauthor","xcal","xnote","xother","xsubj","y","ye","year","yes","yet","yipee","you","your","yours","yourself","yourselves","yu",
 			"bit","fb","feel","coming","days","dear","mp","oh","ow","net","right","says","thanks","think","thought","today","try","trying",
 			"een","look","looks","gd","hey","z","za","ze","zu","zum","color='red'",""," ","http","ly","bit","rt","ya","-","com","www","know","goes","--","anti-","gl","goo","haha","love","nice","org",
-			"years","big","lol","people","que","rise","watch","yg","win","free","retweet","red","color","font","blue"};
+			"years","bad","big","commercial","lol","damn","ass","people","que","rise","fuck","watch","yg","win","free","retweet","red","color","font","blue","cn"};
 	public ArrayList removeStopWords(ArrayList<String> words){
 		for(int i = 0;i < stopWords.length;i ++){
 			if(words.indexOf(stopWords[i]) != -1){

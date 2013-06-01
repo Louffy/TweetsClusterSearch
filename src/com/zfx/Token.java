@@ -7,7 +7,7 @@ public class Token {
 	//String[] stopWords = {"i","you","the","is","are"};
 	public String[] Partition(String input)
 	{
-		Pattern pattern = Pattern.compile("([{}() +:\\|.~,;<>*\'$&%\"!?-_^/=#])");
+		Pattern pattern = Pattern.compile("([{}(): +\\|.~,;<>*\'$&%\"!?-_^/=#])");
 		input = input.toLowerCase();
 		int i = input.indexOf(' ');
 		input = input.substring(i + 1);

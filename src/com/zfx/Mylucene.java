@@ -148,7 +148,7 @@ public class Mylucene{
 				//System.out.println("检索词："+queryStr+"\t共找到  "+hits.length+"条记录");
 				//wResult.put("<br> 检索词："+queryStr,"共找到  "+hits.length+"条记录");
 				int length;
-				if(hits.length > 200)length = 200;
+				if(hits.length > 300)length = 300;
 				else length = hits.length;
 				wResult = new String[length];
 				for(int i = 0; i < length; i++){    //从索引中获取数据是一件很耗时间的事情，你最好只获取用户需要的数据
@@ -157,6 +157,10 @@ public class Mylucene{
 					String highlighterContent = highlighter.getBestFragment(analyzer, "index", content);
 					//System.out.println((i+1) + ")" + "\n index:" + result.get("index") 
 					//		+ "\n content:" + highlighterContent);
+					if(highlighterContent.length()<30){
+						i--;
+						continue;
+					}
 					wResult[i] = new String(highlighterContent);
 				}
 				return wResult;

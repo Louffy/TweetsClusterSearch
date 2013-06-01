@@ -50,6 +50,7 @@ public class TFIDFMeasure {
 				else if(words[k].startsWith("//"))continue;
 				else if(words[k].startsWith("com/"))continue;
 				else if(words[k].startsWith("ly/"))continue;
+				else if(words[k].length()>12)continue;
 				//else if(!words[k].contentEquals(query))continue;
 				else if(!words[k].contentEquals("")){
 					if(words[k].charAt(0) >= '0' && words[k].charAt(0) <= '9')continue;
@@ -82,7 +83,7 @@ public class TFIDFMeasure {
 		int i = 0;
 		for(Entry<String,Integer> e : info){
 			if(e.getKey().equals(query))continue;
-			if(i > info.size()*0.05)break;
+			if(i > info.size()*0.015)break;
 			else i++;
 			termsIndex.put(e.getKey(),e.getValue());
 		}

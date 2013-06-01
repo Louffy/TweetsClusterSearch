@@ -165,7 +165,7 @@ public class Kmeans {
 		for(int i = 0; i < clusters.length; i++){
 			for(int j = 0;j < clusters[i].getCurrentMember().size(); j++){
 				for(int k = 0; k < data[(int) clusters[i].getCurrentMember().get(j)].length; k++){
-					if(data[clusters[i].getCurrentMember().get(j)][k] >= 2)
+					if(data[clusters[i].getCurrentMember().get(j)][k] >= 2.5)
 						if(clusters[i].getInfo().indexOf(terms[k]) == -1)
 							clusters[i].getInfo().add(terms[k]);
 				}
@@ -198,13 +198,13 @@ public class Kmeans {
 		tfidf.Init();
 		float[][] data = tfidf.getKmeansData();
 		String[] terms = tfidf.getTermsIndex();
-		/*for(int i = 0; i < data.length; i++){
+		for(int i = 0; i < data.length; i++){
 			for(int j = 0; j < data[i].length; j++){
 				System.out.print(data[i][j] + "---");
 				
 			}
 			System.out.println();
-		}*/
+		}
 		System.out.println("Start");
 		Kmeans mykmeans = new Kmeans(data,terms.length);
 		mykmeans.start();

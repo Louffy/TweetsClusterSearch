@@ -32,9 +32,9 @@ p, li { font-size: 1.8em; }
 	}
 
 #sidebar {
-	width: 145px;
+	width: 165px;
 	float: left;
-	padding: 0 0 0 15px;
+	padding: 0 0 0 10px;
 	}
 	#sidebar ul {
 		list-style: inside;
