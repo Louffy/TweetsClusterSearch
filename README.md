@@ -1,4 +1,4 @@
-# WeiboSearch
+# TwitterClusterSearch
 
 It is my graduation design project for Bechelor of CS in HUST. 
 [WeiboSearch](https://github.com/Louffy/WeiboSearch) ,Weclome view.
